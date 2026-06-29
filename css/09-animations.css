@@ -1,0 +1,232 @@
+/* Neon Breathing Animations */
+@keyframes neon-breathe-blue {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-50%) scale(1.08);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes neon-breathe-red {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-50%) scale(1.08);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+/* Scroll Down Indicator */
+@keyframes scroll-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-scroll-icon::before {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+/* Fade In Up */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+/* Fade In */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+/* Slide In Left */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+/* Slide In Right */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+/* Scale In */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+/* Stagger Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Hover Transitions */
+.hover-lift {
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-glow {
+  transition: box-shadow var(--duration-base) var(--ease-out);
+}
+
+.hover-glow-gold:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.hover-glow-blue:hover {
+  box-shadow: 0 0 20px rgba(20, 80, 245, 0.3);
+}
+
+.hover-glow-red:hover {
+  box-shadow: 0 0 20px rgba(204, 26, 46, 0.3);
+}
+
+/* Shimmer Effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.15),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+/* Text Reveal */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal-content {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: text-reveal 1s var(--ease-out) forwards;
+}
+
+@keyframes text-reveal {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-blue-glow,
+  .hero-red-glow,
+  .about-circle,
+  .shimmer::after,
+  .hero-scroll-icon::before {
+    animation: none;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-scale-in,
+  .text-reveal-content {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+  }
+}
