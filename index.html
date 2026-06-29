@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BrownBoys Entertainment - Premium DJ and event services for weddings, clubs, and corporate events. Available worldwide.">
-  <meta name="keywords" content="DJ services, wedding DJ, club DJ, corporate events, entertainment, music">
+  <meta name="description" content="BrownBoys Entertainment - Premium DJ and event services for weddings, clubs, corporate events, and private parties. 10+ years experience. Book your unforgettable event.">
+  <meta name="keywords" content="DJ services, wedding DJ, club DJ, corporate events, entertainment, music, event planning">
   <title>BrownBoys Entertainment | Premium DJ & Event Services</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/01-variables.css">
   <link rel="stylesheet" href="css/02-reset.css">
@@ -20,6 +21,7 @@
   <link rel="stylesheet" href="css/08-sections.css">
   <link rel="stylesheet" href="css/09-animations.css">
   <link rel="stylesheet" href="css/10-responsive.css">
+  <link rel="stylesheet" href="css/11-new-components.css">
 </head>
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
@@ -31,13 +33,16 @@
         <a href="#" class="navbar-logo">BrownBoys<span>Entertainment</span></a>
 
         <div class="navbar-links">
-          <a href="#trust" class="navbar-link">About</a>
-          <a href="#packages" class="navbar-link">Packages</a>
           <a href="#services" class="navbar-link">Services</a>
+          <a href="#packages" class="navbar-link">Packages</a>
+          <a href="#about" class="navbar-link">About</a>
           <a href="#gallery" class="navbar-link">Gallery</a>
           <a href="#reviews" class="navbar-link">Reviews</a>
+          <a href="#faq" class="navbar-link">FAQ</a>
           <a href="#contact" class="navbar-link">Contact</a>
         </div>
+
+        <a href="#contact" class="btn btn-primary navbar-cta">Book Now</a>
 
         <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
           <span></span>
@@ -50,12 +55,14 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <a href="#trust" class="mobile-menu-link">About</a>
-    <a href="#packages" class="mobile-menu-link">Packages</a>
     <a href="#services" class="mobile-menu-link">Services</a>
+    <a href="#packages" class="mobile-menu-link">Packages</a>
+    <a href="#about" class="mobile-menu-link">About</a>
     <a href="#gallery" class="mobile-menu-link">Gallery</a>
     <a href="#reviews" class="mobile-menu-link">Reviews</a>
+    <a href="#faq" class="mobile-menu-link">FAQ</a>
     <a href="#contact" class="mobile-menu-link">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top: var(--space-6); width: 100%;">Book Now</a>
   </div>
 
   <main id="main">
@@ -68,31 +75,33 @@
 
       <div class="container">
         <div class="hero-content">
-          <p class="hero-eyebrow">Premium DJ & Event Services</p>
-          <h1 class="hero-headline">Professional DJ Services for Every Occasion</h1>
-          <p class="hero-subheadline">Creating unforgettable experiences with premium sound, lighting, and entertainment tailored to your event.</p>
+          <div class="hero-badges">
+            <span class="badge badge-gold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              5.0 Rating · 50+ Reviews
+            </span>
+            <span class="badge badge-blue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Available Worldwide
+            </span>
+          </div>
+
+          <h1 class="hero-headline">Premium DJ Services That Turn Your Event Into an Experience</h1>
+          <p class="hero-subheadline">Weddings, corporate galas, club nights, and private celebrations — delivered with world-class sound, lighting, and crowd mastery since 2014.</p>
+
+          <div class="hero-buttons">
+            <a href="#packages" class="btn btn-primary btn-lg">View Packages & Pricing</a>
+            <a href="#contact" class="btn btn-secondary btn-lg">Get a Free Quote</a>
+          </div>
 
           <div class="hero-services">
             <span class="hero-service">Weddings</span>
             <span class="hero-dot"></span>
-            <span class="hero-service">Clubs</span>
-            <span class="hero-dot"></span>
             <span class="hero-service">Corporate Events</span>
             <span class="hero-dot"></span>
+            <span class="hero-service">Clubs & Festivals</span>
+            <span class="hero-dot"></span>
             <span class="hero-service">Private Parties</span>
-          </div>
-
-          <div class="hero-buttons">
-            <a href="#packages" class="btn btn-primary">View Packages</a>
-            <a href="#contact" class="btn btn-secondary">Book Now</a>
-          </div>
-
-          <div class="hero-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            Available Worldwide
           </div>
         </div>
       </div>
@@ -103,66 +112,146 @@
       </div>
     </section>
 
-    <!-- Trust Section -->
-    <section id="trust" class="trust section">
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
       <div class="container">
-        <p class="section-label text-center">Why Choose Us</p>
-        <h2 class="section-title text-center">Trusted by Hundreds of Clients</h2>
-
-        <div class="trust-grid">
-          <div class="trust-card">
-            <h3 class="process-title">10+ Years Experience</h3>
-            <p>Professional DJ services for weddings, clubs, and corporate events since 2014.</p>
+        <div class="social-proof-grid">
+          <div class="social-proof-item">
+            <span class="social-proof-number">10+</span>
+            <span class="social-proof-label">Years Experience</span>
           </div>
-          <div class="trust-card">
-            <h3 class="process-title">500+ Events</h3>
-            <p>SUCCESSFUL EVENTS DELIVERED ACROSS MULTIPLE CONTINENTS AND VENUES.</p>
+          <div class="social-proof-divider"></div>
+          <div class="social-proof-item">
+            <span class="social-proof-number">500+</span>
+            <span class="social-proof-label">Events Delivered</span>
           </div>
-          <div class="trust-card">
-            <h3 class="process-title">5.0 Rating</h3>
-            <p>CONSISTENTLY RATED 5 STARS BY CLIENTS ON GOOGLE AND SOCIAL PLATFORMS.</p>
+          <div class="social-proof-divider"></div>
+          <div class="social-proof-item">
+            <span class="social-proof-number">50+</span>
+            <span class="social-proof-label">Five-Star Reviews</span>
           </div>
-          <div class="trust-card">
-            <h3 class="process-title">Professional Equipment</h3>
-            <p>INDUSTRY-LEADING SOUND, LIGHTING, AND EFFECTS FOR ANY VENUE SIZE.</p>
+          <div class="social-proof-divider"></div>
+          <div class="social-proof-item">
+            <span class="social-proof-number">3</span>
+            <span class="social-proof-label">Continents Served</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process section section-elevated">
+    <!-- Services Section -->
+    <section id="services" class="services section">
       <div class="container">
-        <p class="section-label text-center">Our Process</p>
-        <h2 class="section-title text-center">Simple Steps to Your Perfect Event</h2>
+        <p class="section-label text-center">What We Do</p>
+        <h2 class="section-title text-center">Services Built for Every Event</h2>
+        <p class="section-subtitle text-center text-muted">From intimate gatherings to sold-out venues, we bring the energy, equipment, and expertise your event deserves.</p>
 
-        <div class="process-steps">
-          <div class="process-connector"></div>
+        <div class="services-grid">
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z"/>
+                <path d="M24 14v10l8 4"/>
+                <circle cx="24" cy="24" r="3"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Wedding DJ</h3>
+            <p class="service-desc">Ceremony to last dance — custom playlists, seamless transitions, and emotional moments handled with care. Your soundtrack, perfected.</p>
+            <div class="service-tags">
+              <span class="service-tag">Ceremony Music</span>
+              <span class="service-tag">Reception</span>
+              <span class="service-tag">MC Services</span>
+            </div>
+          </div>
 
-          <div class="process-step">
-            <div class="process-number">01</div>
-            <h3 class="process-title">Inquiry</h3>
-            <p class="process-desc">Share your event details and vision with us.</p>
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="8" y="12" width="32" height="24" rx="2"/>
+                <path d="M16 12v-4a8 8 0 0 1 16 0v4"/>
+                <circle cx="24" cy="24" r="4"/>
+                <path d="M24 20v-2M24 30v-2M20 24h-2M30 24h-2"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Corporate Events</h3>
+            <p class="service-desc">Product launches, galas, conferences, and team events. Professional, punctual, and polished to reflect your brand.</p>
+            <div class="service-tags">
+              <span class="service-tag">Galas</span>
+              <span class="service-tag">Conferences</span>
+              <span class="service-tag">Brand Activations</span>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-number">02</div>
-            <h3 class="process-title">Consultation</h3>
-            <p class="process-desc">We discuss music preferences, timeline, and requirements.</p>
+
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 36c0-6.63 5.37-12 12-12s12 5.37 12 12"/>
+                <circle cx="24" cy="14" r="8"/>
+                <path d="M8 36h32"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Club & Festival DJ</h3>
+            <p class="service-desc">High-energy sets that keep the floor packed. Residencies, one-off appearances, and festival stages — we read the crowd and deliver.</p>
+            <div class="service-tags">
+              <span class="service-tag">Residencies</span>
+              <span class="service-tag">Festivals</span>
+              <span class="service-tag">Guest Sets</span>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-number">03</div>
-            <h3 class="process-title">Custom Quote</h3>
-            <p class="process-desc">Receive a tailored package that fits your needs and budget.</p>
+
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 40V20l16-8 16 8v20"/>
+                <path d="M4 40h40"/>
+                <path d="M18 22l6-3 6 3"/>
+                <rect x="18" y="28" width="12" height="12" rx="1"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Private Parties</h3>
+            <p class="service-desc">Birthdays, anniversaries, graduations, and milestone celebrations. Bespoke music curation for your guest list and vibe.</p>
+            <div class="service-tags">
+              <span class="service-tag">Birthdays</span>
+              <span class="service-tag">Milestones</span>
+              <span class="service-tag">Themed Parties</span>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-number">04</div>
-            <h3 class="process-title">Confirmation</h3>
-            <p class="process-desc">Book your date and finalize all event details.</p>
+
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="24" cy="16" r="6"/>
+                <path d="M12 40c0-6.63 5.37-12 12-12s12 5.37 12 12"/>
+                <path d="M24 22v4"/>
+                <path d="M18 34l6 4 6-4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Professional MC</h3>
+            <p class="service-desc">Charismatic hosting that keeps your event flowing. Announcements, crowd engagement, and seamless coordination with vendors.</p>
+            <div class="service-tags">
+              <span class="service-tag">Crowd Engagement</span>
+              <span class="service-tag">Announcements</span>
+              <span class="service-tag">Vendor Coordination</span>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-number">05</div>
-            <h3 class="process-title">Event Day</h3>
-            <p class="process-desc">We arrive early, set up, and deliver an unforgettable experience.</p>
+
+          <div class="service-card card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 36V16l16-8 16 8v20"/>
+                <circle cx="24" cy="22" r="4"/>
+                <path d="M18 32l6 4 6-4"/>
+                <path d="M4 36h40"/>
+                <path d="M16 12l8-4 8 4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Lighting & Production</h3>
+            <p class="service-desc">Intelligent light shows, LED walls, atmospheric effects, and custom visual designs. Transform any venue into a spectacle.</p>
+            <div class="service-tags">
+              <span class="service-tag">Intelligent Lighting</span>
+              <span class="service-tag">LED Walls</span>
+              <span class="service-tag">Atmospheric FX</span>
+            </div>
           </div>
         </div>
       </div>
@@ -171,15 +260,15 @@
     <!-- Packages Section -->
     <section id="packages" class="packages section">
       <div class="container">
-        <p class="section-label text-center">Packages</p>
-        <h2 class="section-title text-center">Professional DJ Packages</h2>
-        <p class="section-subtitle text-center text-muted">Choose the perfect package for your event. All packages include professional sound and lighting.</p>
+        <p class="section-label text-center">Pricing</p>
+        <h2 class="section-title text-center">Choose Your Experience</h2>
+        <p class="section-subtitle text-center text-muted">Three tiers designed to match your event size, budget, and ambition. Every package includes professional sound and lighting.</p>
 
         <div class="packages-grid">
           <div class="package-card card">
             <div class="package-card-title">Basic</div>
             <div class="package-card-price">From $500 <span>/ event</span></div>
-            <p class="text-muted">Perfect for small gatherings and private parties.</p>
+            <p class="text-muted">Small gatherings, house parties, and intimate celebrations that deserve pro-level sound.</p>
             <div class="package-card-features">
               <div class="package-card-feature">4-Hour DJ Performance</div>
               <div class="package-card-feature">Professional Sound System</div>
@@ -187,13 +276,14 @@
               <div class="package-card-feature">Song Requests Welcome</div>
               <div class="package-card-feature">MC Services Included</div>
             </div>
-            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--space-6); width: 100%;">Get Quote</a>
+            <a href="basic.html" class="btn btn-outline" style="margin-top: var(--space-6); width: 100%;">View Full Details</a>
+            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--space-3); width: 100%;">Get Quote</a>
           </div>
 
           <div class="package-card card premium">
             <div class="package-card-title">Premium</div>
             <div class="package-card-price">From $1,200 <span>/ event</span></div>
-            <p class="text-muted">Ideal for weddings and corporate events.</p>
+            <p class="text-muted">Weddings, corporate functions, and medium-scale events needing that extra polish.</p>
             <div class="package-card-features">
               <div class="package-card-feature">6-Hour DJ Performance</div>
               <div class="package-card-feature">Premium Sound System</div>
@@ -203,14 +293,15 @@
               <div class="package-card-feature">Dance Floor Lighting</div>
               <div class="package-card-feature">Smoke & Haze Effects</div>
             </div>
-            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--space-6); width: 100%;">Get Quote</a>
+            <a href="premium.html" class="btn btn-outline" style="margin-top: var(--space-6); width: 100%;">View Full Details</a>
+            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--space-3); width: 100%;">Get Quote</a>
           </div>
 
           <div class="package-card card luxury shimmer">
             <div class="package-card-featured">Most Popular</div>
             <div class="package-card-title">Luxury</div>
             <div class="package-card-price">From $2,500 <span>/ event</span></div>
-            <p class="text-muted">The complete entertainment experience.</p>
+            <p class="text-muted">The complete entertainment experience for weddings, galas, and once-in-a-lifetime events.</p>
             <div class="package-card-features">
               <div class="package-card-feature">8+ Hours DJ Performance</div>
               <div class="package-card-feature">Top-Tier Sound & Subwoofer</div>
@@ -221,27 +312,84 @@
               <div class="package-card-feature">Photo Booth Option Available</div>
               <div class="package-card-feature">Live Performer Collaboration</div>
             </div>
-            <a href="#contact" class="btn btn-primary" style="margin-top: var(--space-6); width: 100%;">Get Quote</a>
+            <a href="luxury.html" class="btn btn-primary" style="margin-top: var(--space-6); width: 100%;">View Full Details</a>
+            <a href="#contact" class="btn btn-secondary" style="margin-top: var(--space-3); width: 100%;">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section section-elevated">
+      <div class="container">
+        <p class="section-label text-center">How It Works</p>
+        <h2 class="section-title text-center">From Inquiry to Unforgettable</h2>
+        <p class="section-subtitle text-center text-muted">A simple, transparent process that puts you in control while we handle the details.</p>
+
+        <div class="process-steps">
+          <div class="process-connector"></div>
+
+          <div class="process-step">
+            <div class="process-number">01</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="process-title">Inquiry</h3>
+            <p class="process-desc">Tell us your event date, venue, and vision. We respond within 24 hours with availability and initial guidance.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">02</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="process-title">Consultation</h3>
+            <p class="process-desc">A detailed call or meeting to nail down music taste, timeline, special requests, and venue logistics.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">03</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 class="process-title">Custom Quote</h3>
+            <p class="process-desc">Receive a transparent, itemized proposal tailored to your event. No hidden fees, no surprises.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">04</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+            </div>
+            <h3 class="process-title">Booking</h3>
+            <p class="process-desc">Secure your date with a 30% deposit. We lock it in and begin pre-event planning immediately.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">05</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 class="process-title">Event Day</h3>
+            <p class="process-desc">We arrive early, set up flawlessly, and deliver an experience your guests will talk about for years.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="about section">
+    <section id="about" class="about section">
       <div class="container">
         <div class="about-grid">
           <div class="about-content">
             <p class="section-label">About Us</p>
             <h2 class="section-title">Crafting Unforgettable Moments Since 2014</h2>
-            <p>BrownBoys Entertainment is a premium DJ and event services company founded on a passion for music and creating memorable experiences. With over a decade in the industry, we have built a reputation for excellence, professionalism, and delivering beyond expectations.</p>
-            <p>From intimate gatherings to grand celebrations with thousands of guests, we bring the same dedication to every event. Our diverse music library spans genres and decades, ensuring every crowd finds their rhythm on the dance floor.</p>
+            <p>BrownBoys Entertainment was founded on a simple belief: great events start with great music. Over the past decade, we've grown from a single DJ with a dream into a full-service entertainment company trusted by couples, corporations, and venues across three continents.</p>
+            <p>What sets us apart? We don't just play songs — we read rooms. We understand that a wedding ceremony requires a completely different energy than a midnight club set, and we shift gears flawlessly between them. Our equipment is industry-leading, our preparation is meticulous, and our passion is undeniable.</p>
 
             <div class="quote-block">
-              <p>"THE DJ ISN'T JUST PLAYING MUSIC—THEY'RE CRAFTING THE SOUNDTRACK TO YOUR MOST PRECIOUS MEMORIES."</p>
+              <p>"The DJ isn't just playing music — they're crafting the soundtrack to your most precious memories."</p>
             </div>
 
-            <p>Beyond music, we offer complete entertainment solutions including professional MC services, stunning lighting productions, and event coordination. We work closely with you to understand your vision and bring it to life.</p>
+            <p>Every event gets our full attention. From the first inquiry to the final song, you're working with professionals who treat your celebration like it's their own.</p>
+
+            <a href="#contact" class="btn btn-primary" style="margin-top: var(--space-6);">Work With Us</a>
           </div>
 
           <div class="about-decoration">
@@ -253,72 +401,37 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
+    <!-- Team Section -->
+    <section class="team section section-elevated">
       <div class="container">
-        <p class="section-label text-center">Services</p>
-        <h2 class="section-title text-center">What We Offer</h2>
-        <p class="section-subtitle text-center text-muted">Comprehensive DJ and entertainment services for every type of event.</p>
+        <p class="section-label text-center">The Crew</p>
+        <h2 class="section-title text-center">Meet the Team</h2>
+        <p class="section-subtitle text-center text-muted">The people behind the decks, the lights, and the magic.</p>
 
-        <div class="services-grid">
-          <div class="card">
-            <h3>Wedding DJ</h3>
-            <p>CUSTOM PLAYLISTS, CEREMONY COORDINATION, SEAMLESS TRANSITIONS FROM DINNER TO DANCING.</p>
+        <div class="team-grid">
+          <div class="team-card card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, var(--blue-dim), var(--purple-mid));">DJ</div>
+            <h3 class="team-name">Marcus "MB" Brown</h3>
+            <p class="team-role">Founder & Head DJ</p>
+            <p class="team-bio">10+ years spinning everything from intimate weddings to 5,000-person festivals. Specializes in reading the crowd and building energy.</p>
           </div>
-          <div class="card">
-            <h3>Club DJ</h3>
-            <p>HIGH-ENERGY PERFORMANCES, LATE-NIGHT SETS, GUEST APPEARANCES AND RESIDENCIES.</p>
+          <div class="team-card card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, var(--red-dim), var(--purple-mid));">DJ</div>
+            <h3 class="team-name">Devon "D-Smooth" Williams</h3>
+            <p class="team-role">Resident DJ & MC</p>
+            <p class="team-bio">The voice and energy that keeps your event flowing. Expert MC with a gift for crowd engagement and seamless announcements.</p>
           </div>
-          <div class="card">
-            <h3>Corporate Events</h3>
-            <p>PRODUCT LAUNCHES, GALAS, CONFERENCES, TEAM BUILDING EVENTS, AND BRAND ACTIVATIONS.</p>
+          <div class="team-card card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, var(--gold-dim), var(--purple-mid));">LT</div>
+            <h3 class="team-name">Lisa Torres</h3>
+            <p class="team-role">Event Coordinator</p>
+            <p class="team-bio">Your behind-the-scenes partner. Handles logistics, vendor coordination, and ensures every detail is locked in before the big day.</p>
           </div>
-        </div>
-
-        <div class="services-accordion accordion" style="margin-top: var(--space-10);">
-          <div class="accordion-item active">
-            <button class="accordion-header" aria-expanded="true">
-              <span class="accordion-title">Event Types We Specialize In</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                Weddings, engagement parties, and anniversary celebrations. Corporate galas, product launches, and year-end functions. Club nights, festivals, and music events. Birthday parties, graduation celebrations, and private gatherings. Proms, formal dances, and school events. Religious celebrations and cultural ceremonies.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-              <span class="accordion-title">Additional Services Available</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                Full MC and host services, professional lighting design and intelligent lighting shows, smoke and haze effects, LED uplighting and wall washing, photo booth rentals and instant prints, dance floor packages, visual projections and LED walls, live performer integration, karaoke setups, silent disco equipment.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-              <span class="accordion-title">Equipment & Setup</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                Industry-standard sound systems with subwoofer options for any venue size. Intelligent moving head lights, atmospheric effects, full control over beam and pattern. All equipment includes professional setup by trained technicians. Setup time is included in package pricing and varies based on event size.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-              <span class="accordion-title">Music Library & Requests</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <div class="accordion-body">
-              Extensive music library spanning all genres from the 70s to current hits. Custom playlist consultation before your event. Real-time song requests during the event. Clean edits available for family-friendly events. Cultural and international music specialties. We read the crowd and adjust throughout the night.
-              </div>
-            </div>
+          <div class="team-card card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, rgba(20,80,245,0.2), rgba(212,175,55,0.2));">TK</div>
+            <h3 class="team-name">Tyler Kim</h3>
+            <p class="team-role">Lighting & Production Lead</p>
+            <p class="team-bio">The visual mastermind. Designs light shows, LED wall content, and atmospheric effects that transform venues into immersive spaces.</p>
           </div>
         </div>
       </div>
@@ -327,51 +440,58 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
       <div class="container">
-        <p class="section-label text-center">Gallery</p>
+        <p class="section-label text-center">Portfolio</p>
         <h2 class="section-title text-center">Event Highlights</h2>
-        <p class="section-subtitle text-center text-muted">Captured moments from events we've brought to life.</p>
+        <p class="section-subtitle text-center text-muted">A glimpse into events we've brought to life. Real photos coming soon.</p>
 
         <div class="gallery-grid">
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9834;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a0a2e, #0d1b3e);">
+              <span class="gallery-label">Luxury Wedding · Miami</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9835;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2e0a1a, #1b0d0d);">
+              <span class="gallery-label">Corporate Gala · NYC</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9833;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a1a2e, #0d1b1b);">
+              <span class="gallery-label">Club Night · Los Angeles</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9839;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a2e0a, #1b1b0d);">
+              <span class="gallery-label">Private Party · Chicago</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9834;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2e1a0a, #1b0d0d);">
+              <span class="gallery-label">Festival Stage · Austin</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9835;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a2e1a, #0d1b1b);">
+              <span class="gallery-label">Wedding Reception · Atlanta</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9833;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a0a1a, #1b0d1b);">
+              <span class="gallery-label">Brand Launch · San Francisco</span>
+            </div>
           </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9839;</span>
-          </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9834;</span>
-          </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9835;</span>
-          </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9833;</span>
-          </div>
-          <div class="gallery-cell">
-            <span class="gallery-icon">&#9839;</span>
+          <div class="gallery-item">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a1a1a, #0d0d1b);">
+              <span class="gallery-label">New Year's Eve · Las Vegas</span>
+            </div>
           </div>
         </div>
 
         <div class="gallery-cta">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View More on Instagram</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: var(--space-2);"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            See More on Instagram
+          </a>
         </div>
       </div>
     </section>
@@ -390,7 +510,7 @@
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
           </div>
-          <p class="reviews-source">Based on 50+ reviews on Google</p>
+          <p class="reviews-source">Based on 50+ reviews on Google & The Knot</p>
         </div>
 
         <div class="reviews-grid">
@@ -402,8 +522,14 @@
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
-            <p class="review-quote">" absolutely incredible! kept everyone on the dance floor all night. our wedding wouldn't have been the same without them. "</p>
-            <p class="review-author">— Sarah & Michael Thompson, Wedding</p>
+            <p class="review-quote">"Absolutely incredible! Marcus kept everyone on the dance floor all night. Our wedding wouldn't have been the same without them. The music transitions were seamless and he read the crowd perfectly."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #1a3a5c, #0d1b3e);">ST</div>
+              <div>
+                <p class="review-name">Sarah & Michael Thompson</p>
+                <p class="review-event">Wedding · Miami, FL</p>
+              </div>
+            </div>
           </div>
 
           <div class="review-card">
@@ -414,8 +540,14 @@
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
-            <p class="review-quote">" hired for our corporate gala and they exceeded all expectations. professional from start to finish, top-tier equipment. "</p>
-            <p class="review-author">— James Richardson, Corporate Event</p>
+            <p class="review-quote">"Hired for our corporate gala and they exceeded all expectations. Professional from start to finish, top-tier equipment, and the lighting show was breathtaking. Our CEO was impressed."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #5c1a1a, #1b0d0d);">JR</div>
+              <div>
+                <p class="review-name">James Richardson</p>
+                <p class="review-event">Corporate Gala · New York, NY</p>
+              </div>
+            </div>
           </div>
 
           <div class="review-card">
@@ -426,8 +558,68 @@
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
-            <p class="review-quote">" they've been our go-to for club residencies. brings energy every single time and knows how to read the crowd perfectly. "</p>
-            <p class="review-author">— The Underground Nightclub, Club Owner</p>
+            <p class="review-quote">"They've been our go-to for club residencies for two years now. Devon brings energy every single time and knows how to read the crowd perfectly. Booked solid every weekend."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #1a5c3a, #0d1b0d);">UN</div>
+              <div>
+                <p class="review-name">The Underground Nightclub</p>
+                <p class="review-event">Weekly Residency · Los Angeles, CA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-quote">"The lighting production alone was worth the booking. Tyler transformed our warehouse venue into something out of a music video. Guests were mesmerized all night."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #3a1a5c, #1b0d3e);">AP</div>
+              <div>
+                <p class="review-name">Amanda Perez</p>
+                <p class="review-event">Brand Launch Party · San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-quote">"Lisa made planning our daughter's quinceañera so easy. She handled all the vendor coordination, timeline, and even helped with the playlist. Stress-free and stunning."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #5c3a1a, #1b1b0d);">MR</div>
+              <div>
+                <p class="review-name">Maria Rodriguez</p>
+                <p class="review-event">Quinceañera · Houston, TX</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-quote">"Best decision we made for our New Year's Eve party. They brought the full luxury package and our guests are still talking about it months later. Worth every penny."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #0a3a5c, #0d0d1b);">DW</div>
+              <div>
+                <p class="review-name">David & Wendy Chen</p>
+                <p class="review-event">NYE Private Party · Las Vegas, NV</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -437,10 +629,11 @@
     <section id="faq" class="faq section">
       <div class="container">
         <div class="faq-grid">
-          <div>
+          <div class="faq-intro">
             <p class="section-label">Questions</p>
             <h2 class="section-title">Frequently Asked</h2>
-            <p class="text-muted">Find answers to common questions about our DJ services. Don't see your question? Reach out directly.</p>
+            <p class="text-muted">Everything you need to know before booking. Don't see your question? Reach out directly — we respond within 24 hours.</p>
+            <a href="#contact" class="btn btn-primary" style="margin-top: var(--space-6);">Ask Us Anything</a>
           </div>
 
           <div class="faq-questions accordion">
@@ -451,40 +644,39 @@
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  For weddings and major events, we recommend booking 3-6 months in advance to secure your date. For smaller events and parties, 4-6 weeks notice is typically sufficient. Peak season (May-October) fills quickly, so earlier is always better.
+                  For weddings and major events, we recommend booking 3-6 months in advance to secure your date. For smaller events and parties, 4-6 weeks notice is typically sufficient. Peak season (May-October and December) fills quickly, so earlier is always better. Last-minute bookings are possible depending on availability — just reach out and we'll let you know.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <button class="accordion-header" aria-expanded="false">
-                <span class="accordion-title">Do you travel for events?</span>
+                <span class="accordion-title">Do you travel for destination events?</span>
                 <span class="accordion-icon">+</span>
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  Absolutely. We're available worldwide for destination weddings, international events, and travel requests. Travel costs are calculated based on distance and logistics. Contact us with your location details for a custom quote including travel.
+                  Absolutely. We're available worldwide for destination weddings, international corporate events, and travel requests. We've performed across North America, Europe, and the Caribbean. Travel costs are calculated based on distance, accommodation needs, and equipment logistics. Contact us with your location details for a custom quote that includes all travel expenses.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <button class="accordion-header" aria-expanded="false">
-                <span class="accordion-title">What does setup involve?</span>
-                <span class="accordion-icon">+</span>
+                <span class="accordion-title">What does setup involve, and how early do you arrive?</span>
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  We arrive 2-4 hours before your event to set up all equipment. Setup time is included in package pricing. We handle all technical aspects including sound checks, lighting placement, and safety checks. The venue receives a clean setup with all appropriate cable management.
+                  We arrive 2-4 hours before your event to set up all equipment. Setup time is included in package pricing — no hidden fees. We handle every technical aspect: sound checks, lighting placement, safety checks, and cable management. The venue receives a clean, professional setup. For larger events with LED walls or complex lighting, we may arrive the day before for pre-configuration.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <button class="accordion-header" aria-expanded="false">
-                <span class="accordion-title">Can I request specific songs?</span>
+                <span class="accordion-title">Can I request specific songs or create a playlist?</span>
                 <span class="accordion-icon">+</span>
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  Yes! We encourage creating a custom playlist for your must-play songs and do-not-play list. We discuss your preferences during consultation. Live requests are also welcome during the event—we'll incorporate them seamlessly into the set while reading the crowd energy.
+                  Yes — we encourage it! During your consultation, we'll build a must-play list and a do-not-play list together. You can also share Spotify playlists or general vibe preferences. During the event, live requests are welcome and seamlessly incorporated. We read the crowd energy and adjust in real-time, so your custom picks enhance the flow rather than disrupt it.
                 </div>
               </div>
             </div>
@@ -495,7 +687,29 @@
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  We accept bank transfers, credit cards, and cash. A 30% deposit is required to secure your date, with the remaining balance due 14 days before the event. Payment plans are available for larger events—discuss during consultation.
+                  We accept bank transfers, all major credit cards, Venmo, PayPal, and cash. A 30% deposit is required to secure your date, with the remaining balance due 14 days before the event. For larger events, payment plans are available — just mention it during your consultation and we'll structure something that works for you.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span class="accordion-title">What happens if the DJ gets sick or can't make it?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  We have a roster of backup DJs who are fully briefed on your event details and can step in seamlessly. For every booking, we prepare a comprehensive event brief including playlist notes, timeline, and special requests. In ten years, we've never had to use it — but we plan for everything so you never have to worry.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span class="accordion-title">Do you provide equipment, or do we need to rent separately?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  All our packages include professional-grade equipment — sound systems, lighting, microphones, and effects. You never need to rent separately unless you have specific equipment preferences. For exceptionally large venues (2,000+ guests), we may recommend additional subwoofers or satellite speakers, which we can source and include in your quote.
                 </div>
               </div>
             </div>
@@ -506,7 +720,7 @@
               </button>
               <div class="accordion-content">
                 <div class="accordion-body">
-                  If we have upcoming public events, we can share where we'll be performing publicly so you can experience our style firsthand. For private events, we can provide video footage of past performances demonstrating our style, mixing technique, and crowd interaction.
+                  If we have upcoming public events, we'll share where we'll be performing so you can experience our style firsthand. For private events, we provide video footage of past performances demonstrating our mixing technique, crowd interaction, and overall energy. We're also happy to schedule a video call where we can discuss your vision and show you samples of our work.
                 </div>
               </div>
             </div>
@@ -519,34 +733,126 @@
     <section id="contact" class="contact section">
       <div class="container">
         <p class="section-label text-center">Get in Touch</p>
-        <h2 class="section-title text-center">Let's Create Something Amazing</h2>
-        <p class="section-subtitle text-center text-muted" style="margin-bottom: var(--space-16);">Ready to elevate your event? Contact us for a free consultation and custom quote.</p>
+        <h2 class="section-title text-center">Let's Plan Your Event</h2>
+        <p class="section-subtitle text-center text-muted" style="margin-bottom: var(--space-16);">Ready to elevate your event? Fill out the form for a custom quote, or message us directly on WhatsApp for a faster response.</p>
 
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-item">
               <span class="contact-label">Email</span>
-              <span class="contact-value">hello@brownboys.entertainment</span>
+              <a href="mailto:hello@brownboys.entertainment" class="contact-value">hello@brownboys.entertainment</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">Phone</span>
-              <span class="contact-value">+1 (555) 123-4567</span>
+              <a href="tel:+15551234567" class="contact-value">+1 (555) 123-4567</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">WhatsApp</span>
-              <span class="contact-value">+1 (555) 123-4567</span>
+              <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="contact-value">+1 (555) 123-4567</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">Instagram</span>
-              <span class="contact-value">@brownboys.entertainment</span>
+              <a href="https://instagram.com/brownboys.entertainment" target="_blank" rel="noopener noreferrer" class="contact-value">@brownboys.entertainment</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Response Time</span>
+              <span class="contact-value">Within 24 hours</span>
+            </div>
+
+            <div class="contact-availability">
+              <div class="contact-badge">
+                <p class="contact-badge-text">Currently Accepting Bookings</p>
+                <p class="contact-badge-sub">Based in the United States, traveling for destination events worldwide.</p>
+                <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: var(--space-6); width: 100%;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: var(--space-2);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.895c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.895 0-3.171-1.235-6.152-3.476-8.397z"/></svg>
+                  Message on WhatsApp
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="contact-decoration">
-            <div class="contact-badge">
-              <p class="contact-badge-text">Available Worldwide</p>
-              <p class="contact-badge-sub">Based in the United States, traveling for destination events globally.</p>
-              <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: var(--space-6);">Start a Chat</a>
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="booking-form" action="" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group">
+                  <label for="event-type" class="form-label">Event Type *</label>
+                  <select id="event-type" name="event_type" class="form-select" required>
+                    <option value="" disabled selected>Select event type</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="club">Club / Festival</option>
+                    <option value="private">Private Party</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-date" class="form-label">Event Date</label>
+                  <input type="date" id="event-date" name="event_date" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="guest-count" class="form-label">Guest Count</label>
+                  <select id="guest-count" name="guest_count" class="form-select">
+                    <option value="" disabled selected>Select range</option>
+                    <option value="1-50">1-50 guests</option>
+                    <option value="51-100">51-100 guests</option>
+                    <option value="101-200">101-200 guests</option>
+                    <option value="201-500">201-500 guests</option>
+                    <option value="500+">500+ guests</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="venue" class="form-label">Venue / Location</label>
+                <input type="text" id="venue" name="venue" class="form-input" placeholder="City, venue name, or address">
+              </div>
+
+              <div class="form-group">
+                <label for="package-interest" class="form-label">Package Interest</label>
+                <select id="package-interest" name="package_interest" class="form-select">
+                  <option value="" disabled selected>Select a package</option>
+                  <option value="basic">Basic ($500+)</option>
+                  <option value="premium">Premium ($1,200+)</option>
+                  <option value="luxury">Luxury ($2,500+)</option>
+                  <option value="custom">Custom / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Tell Us About Your Event *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Share your vision, music preferences, special requests, or any questions you have..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Request a Quote</button>
+              <p class="form-note">We'll respond within 24 hours with availability and a custom proposal.</p>
+            </form>
+
+            <div class="form-success" id="form-success" style="display: none;">
+              <div class="form-success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="form-success-title">Quote Request Received</h3>
+              <p class="form-success-text">Thanks for reaching out! We've received your event details and will send a custom proposal within 24 hours.</p>
+              <p class="form-success-text">Want a faster response? <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>.</p>
+              <a href="index.html" class="btn btn-secondary" style="margin-top: var(--space-6);">Back to Home</a>
             </div>
           </div>
         </div>
@@ -562,36 +868,51 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
+        <div class="footer-brand-col">
           <div class="footer-brand">BrownBoys Entertainment</div>
           <p class="footer-tagline">Premium DJ & Event Services</p>
-          <p class="text-muted" style="font-size: var(--text-sm);">Creating unforgettable moments through music since 2014.</p>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Navigation</h4>
-          <div class="footer-links">
-            <a href="#trust" class="footer-link">About</a>
-            <a href="#packages" class="footer-link">Packages</a>
-            <a href="#services" class="footer-link">Services</a>
-            <a href="#gallery" class="footer-link">Gallery</a>
+          <p class="text-muted" style="font-size: var(--text-sm);">Creating unforgettable moments through music since 2014. Based in the US, available worldwide.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/brownboys.entertainment" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.895c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.895 0-3.171-1.235-6.152-3.476-8.397z"/></svg>
+            </a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-heading">More</h4>
+          <h4 class="footer-heading">Services</h4>
           <div class="footer-links">
+            <a href="#services" class="footer-link">Wedding DJ</a>
+            <a href="#services" class="footer-link">Corporate Events</a>
+            <a href="#services" class="footer-link">Club & Festival</a>
+            <a href="#services" class="footer-link">Private Parties</a>
+            <a href="#services" class="footer-link">Lighting & Production</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <div class="footer-links">
+            <a href="#about" class="footer-link">About Us</a>
+            <a href="#packages" class="footer-link">Packages</a>
+            <a href="#gallery" class="footer-link">Gallery</a>
             <a href="#reviews" class="footer-link">Reviews</a>
             <a href="#faq" class="footer-link">FAQ</a>
-            <a href="#contact" class="footer-link">Contact</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-heading">Connect</h4>
+          <h4 class="footer-heading">Get in Touch</h4>
           <div class="footer-links">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook</a>
+            <a href="#contact" class="footer-link">Request a Quote</a>
+            <a href="mailto:hello@brownboys.entertainment" class="footer-link">hello@brownboys.entertainment</a>
+            <a href="tel:+15551234567" class="footer-link">+1 (555) 123-4567</a>
             <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp</a>
           </div>
         </div>
@@ -599,7 +920,7 @@
 
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2024 BrownBoys Entertainment. All rights reserved.</p>
-        <p class="text-dim" style="font-size: var(--text-sm);">Premium DJ & Event Services</p>
+        <p class="text-dim" style="font-size: var(--text-sm);">Premium DJ & Event Services · Available Worldwide</p>
       </div>
     </div>
   </footer>

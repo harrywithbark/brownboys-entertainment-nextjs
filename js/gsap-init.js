@@ -1,6 +1,6 @@
-import { gsap } from 'https://cdn.skypack.dev/gsap@3.12.5';
-import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap@3.12.5/ScrollTrigger';
-import { TextPlugin } from 'https://cdn.skypack.dev/gsap@3.12.5/TextPlugin';
+import gsap from 'https://esm.sh/gsap@3.12.5';
+import ScrollTrigger from 'https://esm.sh/gsap@3.12.5/ScrollTrigger';
+import TextPlugin from 'https://esm.sh/gsap@3.12.5/TextPlugin';
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
