@@ -1,0 +1,219 @@
+/* ============================================================
+   Motion & atmosphere — breaks the static / doc-like feel
+   ============================================================ */
+
+/* Ambient background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(212, 175, 55, 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 85% 15%, var(--gold-dim), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, var(--red-neon-dim), transparent 55%);
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-drift {
+  0% { opacity: 0.85; transform: scale(1) translateY(0); }
+  100% { opacity: 1; transform: scale(1.04) translateY(-1%); }
+}
+
+/* Page load — never hide content if JS fails */
+body.loaded main {
+  opacity: 1;
+}
+
+/* Hero — slow zoom for life */
+.hero-image {
+  animation: hero-ken-burns 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes hero-ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+/* Editorial section headers (break centered-doc pattern) */
+.section-intro {
+  max-width: 640px;
+  margin-bottom: var(--space-12);
+}
+
+.section-intro--left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.section-intro--left .section-label::after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.section-intro--left .section-subtitle {
+  margin-left: 0;
+}
+
+/* Gold rule under section labels */
+.section-label {
+  position: relative;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: var(--space-3) auto 0;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.section-intro--left .section-label::after {
+  margin-left: 0;
+}
+
+/* Social proof — alive on hover */
+.social-proof-item {
+  transition:
+    border-color var(--duration-base) var(--ease-out),
+    background var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.social-proof-item:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  background: rgba(201, 168, 76, 0.06);
+  transform: translateY(-2px);
+}
+
+.social-proof-number {
+  display: inline-block;
+}
+
+/* Gallery — subtle zoom on hover */
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+/* Service cards — image zoom */
+.service-card-media img {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.service-card:hover .service-card-media img {
+  transform: scale(1.05);
+}
+
+/* Package cards — lift without overlap */
+.package-card {
+  transition:
+    border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+.packages-grid .package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+/* Active nav link */
+.navbar-link.is-active {
+  color: var(--gold-light);
+}
+
+.navbar-link.is-active::after {
+  width: 100%;
+}
+
+/* About photo — subtle float */
+.about-decoration {
+  position: relative;
+}
+
+.about-decoration .about-photo {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.about-decoration:hover .about-photo {
+  transform: scale(1.02);
+}
+
+/* Production image panel */
+.production-visual img {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.production-visual:hover img {
+  transform: scale(1.03);
+}
+
+/* FAQ items */
+.accordion-item {
+  transition: border-color var(--duration-base) ease;
+}
+
+.accordion-item.active,
+.accordion-item:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+/* Package page header */
+.page-header-bg {
+  animation: header-glow 12s ease-in-out infinite alternate;
+}
+
+@keyframes header-glow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.feature-list-item {
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+body.loaded .feature-list-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.5s var(--ease-out),
+    transform 0.5s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  .hero-image,
+  .page-header-bg {
+    animation: none;
+  }
+
+  body:not(.loaded) main {
+    opacity: 1;
+  }
+
+  .gallery-item:hover img,
+  .service-card:hover .service-card-media img,
+  .packages-grid .package-card:hover,
+  .social-proof-item:hover,
+  .about-decoration:hover .about-photo,
+  .production-visual:hover img {
+    transform: none;
+  }
+}

@@ -1,40 +1,37 @@
 :root {
-  /* BACKGROUNDS */
-  --bg-deep:        #07080F;
-  --bg-card:        #0E1020;
-  --bg-elevated:    #141628;
+  /* BACKGROUNDS — true black base */
+  --bg-primary:     #000000;
+  --bg-secondary:   #080808;
+  --bg-card:        #0F0F0F;
+  --bg-deep:        #000000;
+  --bg-elevated:    #121212;
 
-  /* NEON ACCENTS */
-  --blue-neon:      #1450F5;
-  --blue-glow:      rgba(20, 80, 245, 0.55);
-  --blue-dim:       rgba(20, 80, 245, 0.12);
-
-  --red-neon:       #CC1A2E;
-  --red-glow:       rgba(204, 26, 46, 0.55);
-  --red-dim:        rgba(204, 26, 46, 0.12);
-
-  --purple-mid:     #2D1B4E;
-  --amber:          #E87820;
-
-  /* GOLD */
+  /* GOLD — primary brand accent */
   --gold:           #D4AF37;
-  --gold-light:     #E6C547;
-  --gold-dim:       rgba(212, 175, 55, 0.15);
+  --gold-light:     #F0D875;
+  --gold-dim:       rgba(212, 175, 55, 0.14);
+  --gold-glow:      rgba(212, 175, 55, 0.35);
+  --gold-light-glow: rgba(240, 216, 117, 0.35);
+
+  /* NEON RED — accent */
+  --red-neon:       #FF3D5A;
+  --red-neon-dim:   rgba(255, 61, 90, 0.14);
+  --red-neon-glow:  rgba(255, 61, 90, 0.45);
 
   /* BORDERS */
-  --border:         rgba(212, 175, 55, 0.18);
-  --border-strong:  rgba(212, 175, 55, 0.4);
-  --border-blue:    rgba(20, 80, 245, 0.3);
-  --border-red:     rgba(204, 26, 46, 0.3);
+  --border:         rgba(255, 255, 255, 0.07);
+  --border-strong:  rgba(212, 175, 55, 0.42);
+  --border-red:     rgba(255, 61, 90, 0.45);
 
   /* TEXT */
-  --text-primary:   #F2EEF8;
-  --text-muted:     #9890A8;
-  --text-dim:       #4A4560;
+  --text-primary:   #FFFFFF;
+  --text-secondary: #B5B5B5;
+  --text-muted:     #888888;
+  --text-dim:       #666666;
 
   /* TYPOGRAPHY SCALE */
-  --font-heading:   'Cormorant Garamond', Georgia, serif;
-  --font-body:      'Jost', -apple-system, sans-serif;
+  --font-heading:   'Playfair Display', Georgia, serif;
+  --font-body:      'Inter', -apple-system, sans-serif;
 
   --text-xs:        0.75rem;
   --text-sm:        0.875rem;

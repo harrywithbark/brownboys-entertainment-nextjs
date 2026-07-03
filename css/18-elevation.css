@@ -1,0 +1,722 @@
+/* ============================================================
+   18 — Elevation layer (final override)
+   Re-establishes the black & gold source of truth and styles
+   the rebuilt single-page sections to match the reference flow.
+   ============================================================ */
+
+:root {
+  /* Deeper black surfaces */
+  --bg-primary:       #000000;
+  --bg-secondary:     #020202;
+  --bg-card:          #050505;
+  --bg-deep:          #000000;
+  --bg-elevated:      #080808;
+
+  /* Richer luxury gold */
+  --gold:             #E2C054;
+  --gold-light:       #F7E8A8;
+  --gold-rich:        #B8922E;
+  --gold-dim:         rgba(226, 192, 84, 0.12);
+  --gold-glow:        rgba(226, 192, 84, 0.42);
+  --gold-light-glow:  rgba(247, 232, 168, 0.38);
+
+  --text-secondary:   #A8A8A8;
+  --text-muted:       #777777;
+  --text-dim:         #555555;
+  --border:           rgba(255, 255, 255, 0.05);
+  --border-strong:    rgba(226, 192, 84, 0.55);
+  --font-display:     'Playfair Display', Georgia, serif;
+  --shadow-card:      0 12px 40px rgba(0, 0, 0, 0.65);
+  --shadow-elevated:  0 24px 70px rgba(0, 0, 0, 0.75);
+  --shadow-gold:      0 4px 24px rgba(226, 192, 84, 0.22);
+}
+
+h1, h2, h3, .hero-display { font-family: var(--font-display); }
+
+/* Section rhythm */
+.section { padding-block: clamp(4rem, 8vw, 7rem); }
+
+/* ============================================================
+   Hero refinements
+   ============================================================ */
+.hero-display { font-weight: 700; }
+.hero-headline-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--gold-light);
+  font-style: italic;
+  margin: var(--space-2) 0 var(--space-4);
+  max-width: 720px;
+  text-shadow: 0 0 40px var(--gold-glow);
+}
+.hero-display span {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-rich) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 28px var(--gold-glow));
+}
+.hero-eyebrow {
+  color: var(--gold);
+  letter-spacing: 0.22em;
+  text-shadow: 0 0 20px var(--gold-glow);
+}
+.hero-subheadline {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 0 var(--space-8);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Event-type pills
+   ============================================================ */
+.event-pills { padding-block: var(--space-8) var(--space-4); }
+.event-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.event-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  background: rgba(212, 175, 55, 0.05);
+  transition: background var(--duration-base) var(--ease-out),
+              color var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+.event-pill:hover {
+  background: rgba(212, 175, 55, 0.14);
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   Services grid (8 cards w/ Ideal-for + Add-on badges)
+   ============================================================ */
+.services-elevated-intro {
+  max-width: 760px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+.services-elevated-intro .section-label { color: var(--gold); }
+.services-elevated-intro .section-title { margin: var(--space-3) 0; }
+.services-elevated-intro .section-subtitle { color: var(--text-secondary); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-elevated), var(--shadow-gold);
+}
+.service-card-name {
+  font-size: var(--text-xl);
+  color: #fff;
+  margin: 0 0 var(--space-3);
+}
+.service-card-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 var(--space-6);
+  flex: 1;
+}
+.service-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+.service-ideal {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.service-ideal-label {
+  display: block;
+  color: var(--gold);
+  font-size: 0.68rem;
+  margin-bottom: 0.15rem;
+}
+.service-enquire {
+  font-size: var(--text-sm);
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color var(--duration-base) var(--ease-out);
+}
+.service-enquire:hover { color: #fff; }
+
+.service-card--addon { background: var(--bg-elevated); }
+.service-addon-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-neon);
+  border: 1px solid var(--border-red, rgba(255, 61, 90, 0.45));
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  background: rgba(255, 61, 90, 0.08);
+}
+.services-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-12);
+}
+
+/* ============================================================
+   Wedding specialist
+   ============================================================ */
+.wedding-specialist-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+.wedding-specialist-copy .section-label { color: var(--gold); }
+.wedding-specialist-copy .section-title { margin: var(--space-3) 0 var(--space-5); }
+.wedding-specialist-copy .section-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+.wedding-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.wedding-bullets li {
+  position: relative;
+  padding-left: var(--space-6);
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+}
+.wedding-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+.wedding-specialist-media {
+  position: relative;
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-elevated);
+}
+.wedding-specialist-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+.wedding-specialist-badge {
+  position: absolute;
+  left: var(--space-5);
+  bottom: var(--space-5);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-strong);
+  color: var(--gold-light);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+/* ============================================================
+   Approach (about)
+   ============================================================ */
+.approach-header {
+  max-width: 760px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+.approach-header .section-label { color: var(--gold); }
+.approach-header .section-title { margin: var(--space-3) 0 var(--space-5); }
+.approach-lead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.pillar-card {
+  padding: var(--space-8);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--duration-base) var(--ease-out),
+              transform var(--duration-base) var(--ease-out);
+}
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+}
+.pillar-card h3 {
+  font-size: var(--text-xl);
+  color: var(--gold-light);
+  margin: 0 0 var(--space-3);
+}
+.pillar-card p {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   Packages — refined cards
+   ============================================================ */
+.packages .section-intro--left { max-width: 760px; }
+.packages .section-label { color: var(--gold); }
+.package-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+.package-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-elevated), var(--shadow-gold);
+}
+.package-card.luxury {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(226, 192, 84, 0.15), var(--shadow-gold);
+}
+
+/* ============================================================
+   Reviews — static 3-card + Google panel
+   ============================================================ */
+.reviews-elevated-header {
+  max-width: 760px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+.reviews-elevated-header .section-label { color: var(--gold); }
+.reviews-elevated-header .section-title { margin: var(--space-3) 0; }
+
+.reviews-static-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  align-content: start;
+}
+.review-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-card);
+}
+.review-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: var(--space-4);
+}
+.review-star { width: 16px; height: 16px; fill: var(--gold); }
+.review-quote {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 var(--space-6);
+  flex: 1;
+}
+.review-author { display: flex; align-items: center; gap: var(--space-3); }
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.review-name { margin: 0; font-size: var(--text-sm); color: #fff; font-weight: 600; }
+.review-event { margin: 0; font-size: var(--text-xs); color: var(--text-muted); }
+
+/* Google panel keeps its existing styling; ensure card surface */
+.reviews-google-panel { background: var(--bg-card); border-color: var(--border-strong); }
+
+/* ============================================================
+   Contact — final CTA header
+   ============================================================ */
+.contact-final-header {
+  max-width: 760px;
+  margin: 0 auto var(--space-16);
+  text-align: center;
+}
+.contact-final-header .section-label { color: var(--gold); }
+.contact-final-header .section-title { margin: var(--space-3) 0 var(--space-5); }
+.contact-final-header .section-subtitle { line-height: 1.7; }
+.contact-final-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+/* ============================================================
+   Gallery polish
+   ============================================================ */
+.gallery-item { border: 1px solid var(--border); }
+.gallery-item img { transition: transform var(--duration-slow) var(--ease-out); }
+.gallery-item:hover img { transform: scale(1.06); }
+
+/* ============================================================
+   FAQ polish
+   ============================================================ */
+.faq .section-label { color: var(--gold); }
+
+/* ============================================================
+   Package detail sidebar — back link
+   ============================================================ */
+.sidebar-back-link {
+  display: block;
+  margin-top: var(--space-5);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color var(--duration-base) var(--ease-out);
+}
+.sidebar-back-link:hover { color: var(--gold-light); }
+
+/* ============================================================
+   Black & white — remove all blue tints from earlier layers
+   ============================================================ */
+body {
+  background: #000000;
+  color: #ffffff;
+}
+
+main > section:not(.hero):not(.stats-strip) {
+  background: linear-gradient(165deg, rgba(4, 4, 4, 0.98) 0%, rgba(0, 0, 0, 0.99) 100%) !important;
+  border-color: rgba(226, 192, 84, 0.08) !important;
+}
+
+main > section:not(.hero):not(.stats-strip):nth-of-type(odd) {
+  background: linear-gradient(165deg, rgba(2, 2, 2, 0.99) 0%, rgba(0, 0, 0, 1) 100%) !important;
+}
+
+main > .stats-strip {
+  background: rgba(0, 0, 0, 0.96) !important;
+  border-color: rgba(226, 192, 84, 0.18) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(226, 192, 84, 0.06) !important;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(105deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.65) 45%, rgba(0, 0, 0, 0.88) 100%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.98) 0%, transparent 35%) !important;
+}
+
+.hero-image {
+  filter: contrast(1.1) saturate(0.65) brightness(0.85);
+}
+
+.navbar > .container {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(2, 2, 2, 0.82) 50%,
+    rgba(0, 0, 0, 0.92) 100%
+  ) !important;
+  border-color: rgba(226, 192, 84, 0.22) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(226, 192, 84, 0.08) !important;
+}
+
+.navbar.scrolled > .container {
+  background: rgba(0, 0, 0, 0.96) !important;
+  border-color: rgba(226, 192, 84, 0.45) !important;
+}
+
+.navbar-logo {
+  color: var(--gold-light) !important;
+  text-shadow: 0 0 24px var(--gold-glow) !important;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--gold-light) !important;
+}
+
+.mobile-menu {
+  background: rgba(0, 0, 0, 0.96) !important;
+}
+
+.footer {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 1) 40%) !important;
+}
+
+.footer::before {
+  background: rgba(0, 0, 0, 0.92) !important;
+}
+
+.footer > .container {
+  background: linear-gradient(135deg, rgba(4, 4, 4, 0.98) 0%, rgba(0, 0, 0, 1) 100%) !important;
+  border-color: rgba(226, 192, 84, 0.15) !important;
+}
+
+.card,
+.reviews-google-panel,
+.contact-form,
+.sidebar-card,
+.package-card,
+.review-card,
+.service-card,
+.pillar-card {
+  background: linear-gradient(160deg, rgba(6, 6, 6, 0.99) 0%, rgba(0, 0, 0, 1) 100%) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.gallery-placeholder,
+.gallery-item img[src*="placeholder-event"] {
+  background: linear-gradient(145deg, #0a0a0a 0%, #000000 100%) !important;
+}
+
+.gallery-placeholder::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%) !important;
+}
+
+.page-header-bg,
+.package-detail-main,
+.contact-form-wrapper,
+.modal-content {
+  background: #000000 !important;
+}
+
+/* ============================================================
+   Premium gold polish — buttons, labels, stats
+   ============================================================ */
+.section-label {
+  color: var(--gold) !important;
+  letter-spacing: 0.18em;
+  text-shadow: 0 0 18px var(--gold-glow);
+}
+
+.section-label::after {
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent) !important;
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-rich) 100%) !important;
+  color: #000000 !important;
+  border-color: var(--gold) !important;
+  box-shadow: var(--shadow-gold) !important;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: transparent !important;
+  color: var(--gold-light) !important;
+  border-color: var(--gold-light) !important;
+  box-shadow: 0 0 32px var(--gold-glow) !important;
+}
+
+.btn-secondary {
+  border-color: rgba(226, 192, 84, 0.35) !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: var(--gold-light) !important;
+  color: var(--gold-light) !important;
+  box-shadow: 0 0 24px var(--gold-glow) !important;
+}
+
+.btn-outline {
+  color: var(--gold-light) !important;
+  border-color: var(--gold) !important;
+}
+
+.stats-strip-value {
+  color: var(--gold-light) !important;
+  text-shadow: 0 0 28px var(--gold-glow) !important;
+}
+
+.stats-strip-item:nth-child(n) .stats-strip-value {
+  color: var(--gold-light) !important;
+  text-shadow: 0 0 28px var(--gold-glow) !important;
+}
+
+.stats-strip-label {
+  color: var(--text-muted) !important;
+}
+
+.event-pill {
+  background: rgba(226, 192, 84, 0.04) !important;
+  border-color: rgba(226, 192, 84, 0.35) !important;
+}
+
+.event-pill:hover {
+  background: rgba(226, 192, 84, 0.12) !important;
+  border-color: var(--gold-light) !important;
+  color: var(--gold-light) !important;
+  box-shadow: 0 0 20px var(--gold-glow) !important;
+}
+
+.service-ideal-label { color: var(--gold-light) !important; }
+.service-enquire { color: var(--gold) !important; }
+.service-enquire:hover { color: var(--gold-light) !important; }
+
+.pillar-card h3 { color: var(--gold-light) !important; }
+
+.review-star { fill: var(--gold) !important; filter: drop-shadow(0 0 4px var(--gold-glow)); }
+
+.reviews-number {
+  color: var(--gold-light) !important;
+  text-shadow: 0 0 24px var(--gold-glow) !important;
+}
+
+.package-card-price {
+  color: var(--gold-light) !important;
+}
+
+.package-card-featured {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold)) !important;
+  color: #000 !important;
+}
+
+.gallery-filter.active {
+  background: var(--gold) !important;
+  color: #000 !important;
+  border-color: var(--gold-light) !important;
+  box-shadow: var(--shadow-gold) !important;
+}
+
+.wedding-bullets li::before {
+  background: var(--gold-light) !important;
+  box-shadow: 0 0 16px var(--gold-glow) !important;
+}
+
+.wedding-specialist-badge {
+  border-color: rgba(226, 192, 84, 0.4) !important;
+  color: var(--gold-light) !important;
+}
+
+.review-avatar--dark {
+  background: linear-gradient(135deg, #2a2a2a, #0a0a0a);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.review-avatar--light {
+  background: linear-gradient(135deg, #ffffff, #b5b5b5);
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.review-avatar--gold {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: #000;
+}
+
+.service-card-badge,
+.page-header,
+.addon-card,
+.accordion-item {
+  background: rgba(0, 0, 0, 0.65) !important;
+}
+
+.accordion-item.active {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(212, 175, 55, 0.25) !important;
+}
+
+.form-input,
+.form-select,
+.form-textarea,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background: #0a0a0a !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+.gallery-lightbox {
+  background: rgba(0, 0, 0, 0.96) !important;
+}
+
+/* Deeper ambient — gold only, no color bleed */
+body::before {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(226, 192, 84, 0.06), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 85% 15%, rgba(226, 192, 84, 0.04), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(0, 0, 0, 0.8), transparent 55%) !important;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-static-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .wedding-specialist-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .reviews-static-grid { grid-template-columns: 1fr; }
+  .reviews-layout { grid-template-columns: 1fr !important; }
+  .wedding-bullets { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr !important; }
+  .hero-headline-tagline { font-size: 1.4rem; }
+}

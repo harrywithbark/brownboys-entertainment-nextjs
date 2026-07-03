@@ -1,11 +1,17 @@
 {
   "name": "brownboys-entertainment",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "private": true,
   "description": "BrownBoys Entertainment - Premium DJ and Event Services",
   "scripts": {
-    "start": "node_modules/.bin/serve . -l 5000 --no-clipboard"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "serve": "^14.2.6"
+    "gsap": "^3.15.0",
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

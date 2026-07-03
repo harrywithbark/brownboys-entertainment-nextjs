@@ -1,31 +1,16 @@
-/* Neon Breathing Animations */
-@keyframes neon-breathe-blue {
+/* Gold Breathing Animation */
+@keyframes gold-breathe {
   0% {
     opacity: 0.5;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
   50% {
     opacity: 0.8;
-    transform: translateY(-50%) scale(1.08);
+    transform: scale(1.08);
   }
   100% {
     opacity: 0.5;
-    transform: translateY(-50%) scale(1);
-  }
-}
-
-@keyframes neon-breathe-red {
-  0% {
-    opacity: 0.5;
-    transform: translateY(-50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-50%) scale(1.08);
-  }
-  100% {
-    opacity: 0.5;
-    transform: translateY(-50%) scale(1);
+    transform: scale(1);
   }
 }
 
@@ -153,13 +138,6 @@
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
-.hover-glow-blue:hover {
-  box-shadow: 0 0 20px rgba(20, 80, 245, 0.3);
-}
-
-.hover-glow-red:hover {
-  box-shadow: 0 0 20px rgba(204, 26, 46, 0.3);
-}
 
 /* Shimmer Effect */
 .shimmer {
@@ -207,8 +185,6 @@
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  .hero-blue-glow,
-  .hero-red-glow,
   .about-circle,
   .shimmer::after,
   .hero-scroll-icon::before {

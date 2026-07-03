@@ -1,0 +1,377 @@
+/* ============================================================
+   Standalone sections · refined type · zig-zag services
+   Final override layer — premium spacing & motion
+   ============================================================ */
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --section-gap: clamp(2.75rem, 5.5vw, 4.75rem);
+  --island-radius: 20px;
+  --island-pad: clamp(2.75rem, 6vw, 5rem);
+}
+
+/* --- Typography: lighter, let design breathe --- */
+h1, h2, h3, h4, .hero-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.section-subtitle,
+.about-premium-lead {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.navbar-logo {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-display {
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-transform: none;
+}
+
+.hero-display span {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.stats-strip-value {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+}
+
+.reviews-featured-quote {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pillar-card h3,
+.service-card-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-lg);
+}
+
+.service-card-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+/* --- Page canvas: sections feel separate --- */
+body {
+  background: var(--bg-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding: 0 0 clamp(3rem, 6vw, 5rem);
+}
+
+main > .hero {
+  margin-bottom: 0;
+}
+
+main > .stats-strip {
+  margin-top: calc(var(--section-gap) * -0.35);
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  width: calc(100% - var(--space-8));
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(12, 14, 28, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: var(--space-5) var(--space-8);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+main > section:not(.hero):not(.stats-strip) {
+  position: relative;
+  max-width: 1180px;
+  width: calc(100% - clamp(1.25rem, 4vw, 2.5rem));
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--island-pad) clamp(1.25rem, 4vw, 2.75rem);
+  border-radius: var(--island-radius);
+  background: linear-gradient(165deg, rgba(20, 24, 46, 0.92) 0%, rgba(12, 14, 28, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 28px 80px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+main > section:not(.hero):not(.stats-strip).is-visible {
+  animation: section-enter 0.75s var(--ease-out) both;
+}
+
+@keyframes section-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main > section:not(.hero):not(.stats-strip)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.35), transparent);
+  pointer-events: none;
+}
+
+main > section:not(.hero):not(.stats-strip):nth-of-type(odd) {
+  background: linear-gradient(165deg, rgba(18, 22, 42, 0.95) 0%, rgba(10, 12, 24, 0.98) 100%);
+}
+
+.section {
+  padding: 0;
+}
+
+.about-premium,
+.vibe-section,
+.services-premium,
+.gallery,
+.packages,
+.reviews-featured,
+.cta-band,
+.faq,
+.contact {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.vibe-section,
+.packages,
+.cta-band {
+  border-top: none;
+  border-bottom: none;
+}
+
+/* --- Services: zig-zag event types (restored card menu) --- */
+.services-blocks {
+  display: none;
+}
+
+.services-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--radius-lg);
+  background: rgba(8, 10, 20, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color var(--duration-base) ease;
+}
+
+.service-row:hover {
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.service-row--flip .service-row-media {
+  order: 2;
+}
+
+.service-row--flip .service-row-body {
+  order: 1;
+}
+
+.service-row-media {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  min-height: 240px;
+}
+
+.service-row-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-row-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 8, 15, 0.5), transparent 55%);
+  pointer-events: none;
+}
+
+.service-row .service-card-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 1;
+}
+
+.service-row-body {
+  padding: var(--space-2) var(--space-4);
+}
+
+.service-row-body .service-card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: 0;
+}
+
+.service-row-body .service-card-list li {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+}
+
+.service-row-body .service-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--service-accent, var(--gold));
+  transform: translateY(-50%);
+}
+
+.service-row-body .service-card-lead {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.service-row .service-card-badge {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--service-accent, var(--gold));
+  background: rgba(10, 12, 26, 0.65);
+  backdrop-filter: blur(8px);
+  color: var(--service-accent, var(--gold));
+}
+
+.service-row .service-card-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.service-row--champagne { --service-accent: var(--gold-light); }
+.service-row--gold { --service-accent: var(--gold); }
+.service-row--red { --service-accent: var(--red-neon); }
+
+.services-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-12);
+}
+
+.services-grid {
+  display: none;
+}
+
+/* --- Vibe: mirror zig-zag rhythm --- */
+.vibe-grid {
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+/* --- Gallery / packages breathing room --- */
+.gallery-grid {
+  gap: var(--space-4);
+}
+
+.packages-grid {
+  gap: var(--space-8);
+}
+
+.package-card {
+  border-radius: var(--radius-md);
+}
+
+/* --- Reviews layout spacing --- */
+.reviews-layout {
+  gap: var(--space-10);
+}
+
+/* --- CTA band inside island --- */
+.cta-band .section-title {
+  max-width: 24ch;
+}
+
+/* --- Footer separation --- */
+.footer {
+  margin-top: var(--section-gap);
+}
+
+@media (max-width: 900px) {
+  .service-row,
+  .service-row--flip {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row--flip .service-row-media,
+  .service-row--flip .service-row-body {
+    order: unset;
+  }
+
+  .service-row-media {
+    min-height: 200px;
+  }
+
+  main > .stats-strip {
+    border-radius: var(--radius-md);
+    width: calc(100% - var(--space-6));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:not(.hero):not(.stats-strip).is-visible {
+    animation: none;
+  }
+
+  .hero-image {
+    animation: none;
+  }
+}

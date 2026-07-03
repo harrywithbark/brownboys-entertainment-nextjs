@@ -46,11 +46,6 @@
     padding: var(--space-24) 0 var(--space-12);
   }
 
-  .hero-blue-glow,
-  .hero-red-glow {
-    width: 100%;
-    height: 100%;
-  }
 
   .hero-eyebrow {
     font-size: var(--text-xs);
@@ -110,10 +105,6 @@
   .about-grid {
     grid-template-columns: 1fr;
     gap: var(--space-10);
-  }
-
-  .about-decoration {
-    display: none;
   }
 
   .services-grid {
@@ -189,7 +180,6 @@
   .navbar,
   .whatsapp-btn,
   .hero-bg,
-  .hero-blue-glow,
   .hero-red-glow,
   .mobile-menu,
   .accordion-content {
