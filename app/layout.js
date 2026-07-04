@@ -4,6 +4,13 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ClientInit from '@/components/ClientInit';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#000000',
+};
+
 export const metadata = {
   title: 'BrownBoys Entertainment | Wedding & Event DJ | Surrey, BC',
   description: 'BrownBoys Entertainment — premium DJ, lighting, sparklers, low fog, and Bhangra for weddings, Jaggo, engagements, and club events. Based in Surrey, BC. Available worldwide.',
