@@ -2,8 +2,22 @@ import Link from 'next/link';
 import LeadModal from '@/components/LeadModal';
 
 export const metadata = {
-  title: 'Luxury Package | BrownBoys Entertainment',
-  description: 'Luxury DJ Package from BrownBoys Entertainment - The complete entertainment experience. LED walls, full light shows, event coordinator, and more. Contact for pricing.',
+  title: 'Luxury Package',
+  description: 'BrownBoys Entertainment Luxury DJ Package — full light show, LED wall & custom visuals, dedicated event coordinator, top-tier sound with dual subs, and complete special FX. The ultimate experience for 200+ guest weddings and galas.',
+  alternates: { canonical: '/luxury' },
+  openGraph: {
+    title: 'Luxury DJ Package | BrownBoys Entertainment',
+    description: 'Full light show, LED wall, event coordinator, top-tier sound, and complete FX suite for 200+ guest weddings and galas. Surrey, BC.',
+    url: 'https://www.brownboysentertainment.ca/luxury',
+    images: [{ url: '/assets/dj-hero.png', width: 1200, height: 630, alt: 'BrownBoys Entertainment Luxury DJ Package' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luxury DJ Package | BrownBoys Entertainment',
+    description: 'Full light show, LED wall, event coordinator, top-tier sound, and complete FX suite for luxury weddings & galas.',
+    images: ['/assets/dj-hero.png'],
+  },
 };
 
 const CheckIcon = () => (

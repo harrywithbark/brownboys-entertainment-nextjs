@@ -2,8 +2,22 @@ import Link from 'next/link';
 import LeadModal from '@/components/LeadModal';
 
 export const metadata = {
-  title: 'Basic Package | BrownBoys Entertainment',
-  description: 'Basic DJ Package from BrownBoys Entertainment - Perfect for small gatherings and private parties. Contact for pricing.',
+  title: 'Basic Package',
+  description: 'BrownBoys Entertainment Basic DJ Package — professional sound, basic LED lighting, MC services, and wireless mic. Perfect for small gatherings, birthday parties, and house parties up to 100 guests. Contact for pricing.',
+  alternates: { canonical: '/basic' },
+  openGraph: {
+    title: 'Basic DJ Package | BrownBoys Entertainment',
+    description: 'Professional DJ, sound, basic LED lighting, and MC for events up to 100 guests. Based in Surrey, BC.',
+    url: 'https://www.brownboysentertainment.ca/basic',
+    images: [{ url: '/assets/dj-hero.png', width: 1200, height: 630, alt: 'BrownBoys Entertainment Basic DJ Package' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Basic DJ Package | BrownBoys Entertainment',
+    description: 'Professional DJ, sound, basic LED lighting, and MC for events up to 100 guests. Surrey, BC.',
+    images: ['/assets/dj-hero.png'],
+  },
 };
 
 const CheckIcon = () => (

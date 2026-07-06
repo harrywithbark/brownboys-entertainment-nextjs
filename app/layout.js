@@ -5,17 +5,59 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import ClientInit from '@/components/ClientInit';
 
 export const metadata = {
-  title: 'BrownBoys Entertainment | Wedding & Event DJ | Surrey, BC',
+  metadataBase: new URL('https://www.brownboysentertainment.ca'),
+  title: {
+    default: 'BrownBoys Entertainment | Wedding & Event DJ | Surrey, BC',
+    template: '%s | BrownBoys Entertainment',
+  },
   description: 'BrownBoys Entertainment — premium DJ, lighting, sparklers, low fog, and Bhangra for weddings, Jaggo, engagements, and club events. Based in Surrey, BC. Available worldwide.',
-  keywords: 'DJ Surrey BC, wedding DJ Vancouver, Jaggo DJ, engagement party DJ, Bhangra DJ, BrownBoys Entertainment, DJ lighting Surrey',
+  keywords: [
+    'DJ Surrey BC',
+    'wedding DJ Vancouver',
+    'Jaggo DJ',
+    'engagement party DJ',
+    'Bhangra DJ',
+    'BrownBoys Entertainment',
+    'DJ lighting Surrey',
+    'low fog DJ',
+    'sparklers wedding BC',
+    'South Asian wedding DJ',
+  ],
+  authors: [{ name: 'BrownBoys Entertainment' }],
+  creator: 'BrownBoys Entertainment',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'BrownBoys Entertainment | Premium DJ & Event Production',
     description: 'Weddings, Jaggo, engagements, club nights — DJ, lighting, sparklers, low fog & Bhangra. Based in Surrey, BC. Now booking 2026.',
-    images: ['/assets/dj-hero.png'],
+    url: 'https://www.brownboysentertainment.ca',
+    siteName: 'BrownBoys Entertainment',
+    images: [
+      {
+        url: '/assets/dj-hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'BrownBoys Entertainment DJ setup at a wedding',
+      },
+    ],
+    locale: 'en_CA',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BrownBoys Entertainment | Premium DJ & Event Production',
+    description: 'Weddings, Jaggo, engagements, club nights — DJ, lighting, sparklers, low fog & Bhangra. Based in Surrey, BC. Now booking 2026.',
+    images: ['/assets/dj-hero.png'],
   },
   icons: {
     icon: '/assets/favicon.svg',
+    shortcut: '/assets/favicon.svg',
   },
 };
 
