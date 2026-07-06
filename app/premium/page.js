@@ -2,8 +2,22 @@ import Link from 'next/link';
 import LeadModal from '@/components/LeadModal';
 
 export const metadata = {
-  title: 'Premium Package | BrownBoys Entertainment',
-  description: 'Premium DJ Package from BrownBoys Entertainment - Ideal for weddings and corporate events. Intelligent lighting, custom playlists, and professional MC. Contact for pricing.',
+  title: 'Premium Package',
+  description: 'BrownBoys Entertainment Premium DJ Package — intelligent moving-head lighting, custom playlist, professional MC, smoke & haze, and premium sound for up to 300 guests. Ideal for weddings and corporate galas.',
+  alternates: { canonical: '/premium' },
+  openGraph: {
+    title: 'Premium DJ Package | BrownBoys Entertainment',
+    description: 'Intelligent lighting, custom playlist, professional MC, and premium sound for weddings & galas up to 300 guests. Surrey, BC.',
+    url: 'https://www.brownboysentertainment.ca/premium',
+    images: [{ url: '/assets/dj-hero.png', width: 1200, height: 630, alt: 'BrownBoys Entertainment Premium DJ Package' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium DJ Package | BrownBoys Entertainment',
+    description: 'Intelligent lighting, custom playlist, professional MC, and premium sound for weddings & galas up to 300 guests.',
+    images: ['/assets/dj-hero.png'],
+  },
 };
 
 const CheckIcon = () => (
