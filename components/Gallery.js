@@ -21,25 +21,45 @@ export default function Gallery() {
             <img src="/assets/setup-packages.png" alt="BrownBoys Entertainment premium DJ booth with sparklers and low fog" loading="lazy" />
             <span className="gallery-label">Premium Production · Surrey, BC</span>
           </div>
-          <div className="gallery-item" data-gallery="" data-category="club">
-            <img src="/assets/placeholder-event.svg" alt="Club night event — BrownBoys Entertainment live DJ set" loading="lazy" />
-            <span className="gallery-label">Club Night · Vancouver</span>
+          <div className="gallery-item" data-category="club">
+            <div className="gallery-placeholder">
+              <div className="gallery-placeholder-inner">
+                <svg className="gallery-placeholder-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span className="gallery-placeholder-text">Photo coming soon</span>
+                <span className="gallery-placeholder-sub">Club Night · Vancouver</span>
+              </div>
+            </div>
           </div>
-          <div className="gallery-item" data-gallery="" data-category="jaggo">
-            <img src="/assets/placeholder-event.svg" alt="Jaggo night celebration with dhol and crowd energy" loading="lazy" />
-            <span className="gallery-label">Jaggo · Greater Vancouver</span>
+          <div className="gallery-item" data-category="jaggo">
+            <div className="gallery-placeholder">
+              <div className="gallery-placeholder-inner">
+                <svg className="gallery-placeholder-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span className="gallery-placeholder-text">Photo coming soon</span>
+                <span className="gallery-placeholder-sub">Jaggo · Greater Vancouver</span>
+              </div>
+            </div>
           </div>
           <div className="gallery-item" data-gallery="" data-category="wedding">
             <img src="/assets/dj-hero.png" alt="Wedding reception dancefloor kept full by BrownBoys Entertainment" loading="lazy" />
             <span className="gallery-label">Wedding Reception · Surrey</span>
           </div>
-          <div className="gallery-item" data-gallery="" data-category="wedding">
-            <img src="/assets/placeholder-event.svg" alt="Engagement party with lighting and production" loading="lazy" />
-            <span className="gallery-label">Engagement · Vancouver</span>
+          <div className="gallery-item" data-category="wedding">
+            <div className="gallery-placeholder">
+              <div className="gallery-placeholder-inner">
+                <svg className="gallery-placeholder-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span className="gallery-placeholder-text">Photo coming soon</span>
+                <span className="gallery-placeholder-sub">Engagement · Vancouver</span>
+              </div>
+            </div>
           </div>
-          <div className="gallery-item" data-gallery="" data-category="club">
-            <img src="/assets/placeholder-event.svg" alt="Live DJ set at a private celebration" loading="lazy" />
-            <span className="gallery-label">Private Celebration · Burnaby</span>
+          <div className="gallery-item" data-category="club">
+            <div className="gallery-placeholder">
+              <div className="gallery-placeholder-inner">
+                <svg className="gallery-placeholder-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span className="gallery-placeholder-text">Photo coming soon</span>
+                <span className="gallery-placeholder-sub">Private Celebration · Burnaby</span>
+              </div>
+            </div>
           </div>
         </div>
 
